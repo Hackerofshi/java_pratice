@@ -29,11 +29,11 @@ public class MyProxy {
         try {
 
             // 将代理类转化成字节码数组，然后输出到本地 ，通过jad反编译class文件 （或者直接通过idea 打开class文件）
-            byte[] bytes = sun.misc.ProxyGenerator.generateProxyClass(instance.getClass().getSimpleName(), instance.getClass().getInterfaces());
-            FileOutputStream fileOutputStream = new FileOutputStream("D:\\UsersDesktopproxy$Proxy0.class");
-            fileOutputStream.write(bytes);
-            fileOutputStream.flush();
-            fileOutputStream.close();
+//            byte[] bytes = sun.misc.ProxyGenerator.generateProxyClass(instance.getClass().getSimpleName(), instance.getClass().getInterfaces());
+//            FileOutputStream fileOutputStream = new FileOutputStream("D:\\UsersDesktopproxy$Proxy0.class");
+//            fileOutputStream.write(bytes);
+//            fileOutputStream.flush();
+//            fileOutputStream.close();
         }catch (Exception e){
             e.printStackTrace();
         }

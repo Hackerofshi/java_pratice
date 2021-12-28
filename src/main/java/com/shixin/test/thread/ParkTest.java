@@ -8,10 +8,10 @@ import java.util.concurrent.locks.LockSupport;
 import static java.lang.Thread.sleep;
 
 public class ParkTest {
-    private  final static Logger log = LoggerFactory.getLogger(ParkTest.class);
+    private final static Logger log = LoggerFactory.getLogger(ParkTest.class);
 
     public static void main(String[] args) throws InterruptedException {
-       Thread t1 =  new Thread(()->{
+        Thread t1 = new Thread(() -> {
             log.debug("start...");
             try {
                 sleep(1);
@@ -21,8 +21,8 @@ public class ParkTest {
             log.debug("park...");
             LockSupport.park();
             log.debug("resume...");
-        },"t1");
-       t1.start();
+        }, "t1");
+        t1.start();
         sleep(2);
         log.debug("unpark...");
         LockSupport.unpark(t1);
